@@ -6,15 +6,3 @@ resource "aws_instance" "web" {
     Name = "NewWorld"
   }
 }
-
-module "s3_bucket" {
-  source = "../modules/terraform-aws-s3-bucket"
-
-  bucket = "ewan0006-s3-bucket"
-  acl    = "private"
-
-  versioning = {
-    enabled = false
-  }
-
-}
